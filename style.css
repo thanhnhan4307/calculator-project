@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff9a85, #fae042);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background: rgba(34, 40, 49, 0.8); /* Semi-transparent dark background */
+    padding:30px;
+    border-radius: 25px;
+    width: fit-content;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.calculator form input {
+    border: none;
+    outline: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin: 8px;
+    transform: scale(1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.calculator form input:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 15px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 50px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+form input.equal {
+    width: 145px;
+    font-weight: bold;
+    background: #ff6565; /* Vibrant Red */
+    color: #fff;
+    border-radius: 20px;
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 5px 20px rgba(255, 101, 101, 0.6);
+}
+
+form input.equal:hover {
+    background: #ff4d4d;
+    transform: scale(1.05);
+    box-shadow: 0 3px 15px rgba(255, 77, 77, 0.7);
+}
+
+form input.operator {
+    color: #ffa726; /* Orange */
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+}
+
+form input.operator:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1200px) {
+    .calculator {
+        padding: 25px;
+        width: 85%;
+    }
+
+    .calculator form input {
+        width: 45px;
+        height: 45px;
+        font-size: 19px;
+        margin: 6px;
+    }
+
+    form .display {
+        margin: 15px 0;
+    }
+
+    form .display input {
+        font-size: 38px;
+    }
+
+    form input.equal {
+        width: 115px;
+    }
+}
+
+@media (max-width: 992px) {
+    .calculator {
+        padding: 24px;
+        width: 90%;
+    }
+
+    .calculator form input {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+        margin: 5px;
+    }
+
+    form .display {
+        margin: 14px 0;
+    }
+
+    form .display input {
+        font-size: 36px;
+    }
+
+    form input.equal {
+        width: 108px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calculator {
+        padding: 22px;
+        width: 95%;
+    }
+
+    .calculator form input {
+        width: 40px;
+        height: 40px;
+        font-size: 17px;
+        margin: 5px;
+    }
+
+    form .display {
+        margin: 13px 0;
+    }
+
+    form .display input {
+        font-size: 34px;
+    }
+
+    form input.equal {
+        width: 104px;
+    }
+}
+
+@media (max-width: 576px) {
+    .calculator {
+        padding: 20px;
+        width: 98%;
+    }
+
+    .calculator form input {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+        margin: 4px;
+    }
+
+    form .display {
+        padding: 7px;
+        margin: 12px 0;
+    }
+
+    form .display input {
+        font-size: 32px;
+    }
+
+    form input.equal {
+        width: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    .calculator form input {
+        width: 35px;
+        height: 35px;
+        font-size: 15px;
+        margin: 3px;
+    }
+
+    form .display {
+        padding: 6px;
+        margin: 10px 0;
+    }
+
+    form .display input {
+        font-size: 30px;
+    }
+
+    form input.equal {
+        width: 95px;
+    }
+}
